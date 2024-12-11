@@ -47,3 +47,9 @@ steps:
       }
       ## zip the temp folder which only have the changed files
       Compress-Archive -Path $(system.defaultworkingdirectory)\temp\* -DestinationPath $(Build.ArtifactStagingDirectory)\changedfiles.zip
+- task: PublishBuildArtifacts@1
+  inputs:
+     PathtoPublish: '$(Build.ArtifactStagingDirectory)/Output'
+     ArtifactName: 'drop'
+     publishLocation: 'Container'
+   
