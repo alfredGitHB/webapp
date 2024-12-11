@@ -1,4 +1,5 @@
-trigger: main
+trigger: 
+  - main
 
 ##set flag variables to indicate if the folder is changed.
 
