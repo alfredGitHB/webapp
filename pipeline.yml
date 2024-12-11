@@ -49,6 +49,6 @@ steps:
       Compress-Archive -Path $(system.defaultworkingdirectory)\temp\* -DestinationPath $(Build.ArtifactStagingDirectory)\changedfiles.zip
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)\changedfiles.zip'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
